@@ -1,0 +1,11 @@
+---
+global:
+    resolve_timeout: 0s
+    smtp_require_tls: false
+route:
+    receiver: empty
+    continue: false
+receivers:
+    - name: empty
+    - name: disabled
+templates: []

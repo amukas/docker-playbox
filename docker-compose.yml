@@ -1,0 +1,19 @@
+---
+version: '3.9'
+services:
+  repo1:
+#    image: amukas/repo1:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: repo1
+    ports:
+      # PG
+      - 8000:5432
+      # CH
+      - 8123:8123
+      - 9000:9000
+      # Victoria
+      - 9090:9090
+      # vmalert
+      - 8880:8880
